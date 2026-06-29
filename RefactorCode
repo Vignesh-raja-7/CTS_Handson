@@ -1,0 +1,12 @@
+class Printer:
+    def print_data(self, data):
+        print(data)
+class FileSaver:
+    def save_data(self, data):
+        with open("output.txt", "w") as file:
+            file.write(data)
+text = "Hello World"
+printer = Printer()
+printer.print_data(text)
+saver = FileSaver()
+saver.save_data(text)
