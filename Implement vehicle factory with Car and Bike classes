@@ -1,0 +1,18 @@
+@@ -0,0 +1,17 @@
+class Car:
+    def drive(self):
+        print("Driving a Car")
+class Bike:
+    def drive(self):
+        print("Riding a Bike")
+class VehicleFactory:
+    @staticmethod
+    def get_vehicle(vehicle_type):
+        if vehicle_type == "car":
+            return Car()
+        elif vehicle_type == "bike":
+            return Bike()
+        else:
+            return None
+vehicle = VehicleFactory.get_vehicle("car")
+vehicle.drive()
